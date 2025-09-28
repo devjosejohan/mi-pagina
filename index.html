@@ -1,111 +1,158 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>  <html lang="es">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Portafolio de Johan De La Rosa</title>  
-  <link rel="stylesheet" href="style.css">  
-</head>  
-<body>  
-  <header>  
-    <h1>Johan De La Rosa</h1>  
-    <h2>Aspirante a Desarrollador de Software</h2>  
-    <p class="frase">"Todo lo puedo en Cristo que me fortalece" – Filipenses 4:13</p>  
-  </header>    <main>  
-    <section id="sobre-mi">  
-      <h3>Sobre mí</h3>  
-      <p>Soy estudiante de Desarrollo de Software, profesor de informática básica y apasionado por la creatividad digital. Me gusta explorar nuevas tecnologías, editar imágenes en Photoshop y seguir aprendiendo cada día, ahora guiado por mis valores religiosos.</p>  
-    </section>  <section id="proyectos">  
-  <h3>Proyectos</h3>  
-  <ul>  
-    <li>Prácticas de HTML y CSS – páginas web de prueba.</li>  
-    <li>Ediciones en Photoshop – redibujo y tipografía en mangas.</li>  
-    <li>Edición de video básica – sincronización, color y efectos.</li>  
-  </ul>  
-</section>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Johan De La Rosa</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
 
-<section id="contacto">  
-  <h3>Contacto</h3>  
-  <p>Puedes encontrarme en:</p>  
-  <ul>  
-    <li><a href="https://www.tiktok.com/@johandlrz?_t=ZS-905xGtBj0s5&_r=1" target="_blank">TikTok</a></li>  
-    <li><a href="mailto:delarosajosejohan@gmail.com">Correo electrónico</a></li>  
-    <li><a href="https://www.facebook.com/profile.php?id=
-100085673835356" target="_blank">Facebook</a></li>  
-  </ul>  
-</section>
+    /* Encabezado */
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
-  </main>    <footer>  
-    <p>© 2025 Johan De La Rosa – Con la ayuda de Dios en cada paso</p>  
-  </footer>  
-</body>  
-</html><style>body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-header {
-  background-color: #2e7d32;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-}
+    header h2 {
+      margin: 0.5rem 0;
+      font-weight: normal;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+    .frase {
+      font-style: italic;
+      margin-top: 1rem;
+      color: #ddd;
+      min-height: 1.5em; /* Para animación */
+    }
 
-header h2 {
-  margin: 0.5rem 0;
-  font-weight: normal;
-}
+    /* Main */
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
 
-.frase {
-  font-style: italic;
-  margin-top: 1rem;
-}
+    section {
+      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
+    h3 {
+      border-bottom: 2px solid #555;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
 
-section {
-  margin-bottom: 2rem;
-}
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-h3 {
-  border-bottom: 2px solid #2e7d32;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
+    ul li {
+      margin: 0.5rem 0;
+    }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+    a {
+      color: #555;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.2s;
+    }
 
-ul li {
-  margin: 0.5rem 0;
-}
+    a:hover {
+      color: #000;
+      transform: scale(1.05);
+    }
 
-a {
-  color: #2e7d32;
-  text-decoration: none;
-}
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
 
-a:hover {
-  text-decoration: underline;
-}
+<header>
+  <h1>Johan De La Rosa</h1>
+  <h2>Aspirante a Desarrollador de Software</h2>
+  <p class="frase" id="frase">"Todo lo puedo en Cristo que me fortalece" – Filipenses 4:13</p>
+</header>
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #eee;
-  font-size: 0.9rem;
-}</style>
+<main>
+  <section id="sobre-mi">
+    <h3>Sobre mí</h3>
+    <p>Soy estudiante de Desarrollo de Software, profesor de informática básica y apasionado por la creatividad digital. Me gusta explorar nuevas tecnologías, editar imágenes en Photoshop y seguir aprendiendo cada día, ahora guiado por mis valores religiosos.</p>
+  </section>
+
+  <section id="proyectos">
+    <h3>Proyectos</h3>
+    <ul>
+      <li>Prácticas de HTML y CSS – páginas web de prueba.</li>
+      <li>Ediciones en Photoshop – redibujo y tipografía en mangas.</li>
+      <li>Edición de video básica – sincronización, color y efectos.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h3>Contacto</h3>
+    <p>Puedes encontrarme en:</p>
+    <ul>
+      <li><a href="https://www.tiktok.com/@johandlrz?_t=ZS-905xGtBj0s5&_r=1" target="_blank">TikTok</a></li>
+      <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=delarosajosejohan@gmail.com&su=Hola&body=Escribe%20tu%20mensaje%20aquí" target="_blank">Correo electrónico</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100085673835356" target="_blank">Facebook</a></li>
+      <li><a href="https://ideasbro.blogspot.com/?m=1" target="_blank">Mi Blog</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Johan De La Rosa – Con la ayuda de Dios en cada paso</p>
+</footer>
+
+<script>
+  // Mensaje en consola
+  console.log("Bienvenido al portafolio de Johan 🙌");
+
+  // Animación de escritura para la frase bíblica
+  const frase = `"Todo lo puedo en Cristo que me fortalece" – Filipenses 4:13`;
+  const fraseElemento = document.getElementById("frase");
+  let i = 0;
+
+  function escribirLetra() {
+    if (i < frase.length) {
+      fraseElemento.textContent += frase.charAt(i);
+      i++;
+      setTimeout(escribirLetra, 50); // Velocidad de escritura
+    }
+  }
+
+  // Limpiar antes de empezar
+  fraseElemento.textContent = "";
+  escribirLetra();
+</script>
+
+</body>
+</html>
