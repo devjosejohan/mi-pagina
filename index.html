@@ -50,25 +50,91 @@
 header {
   background-color: #2e7d32;
   color: #fff;
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Johan De La Rosa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Johan De La Rosa</h1>
+    <h2>Aspirante a Desarrollador de Software</h2>
+    <p class="frase">"Todo lo puedo en Cristo que me fortalece" – Filipenses 4:13</p>
+  </header>
+
+  <main>
+    <section id="sobre-mi">
+      <h3>Sobre mí</h3>
+      <p>
+        Soy estudiante de Desarrollo de Software, profesor de informática básica y apasionado por la creatividad digital.
+        Me gusta explorar nuevas tecnologías, editar imágenes en Photoshop y seguir aprendiendo cada día, ahora guiado por mis valores cristianos.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h3>Proyectos</h3>
+      <ul>
+        <li>Páginas web de práctica con HTML y CSS.</li>
+        <li>Ediciones en Photoshop (redibujo y tipografía en mangas).</li>
+        <li>Edición de video básica (sincronización, color y efectos).</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h3>Contacto</h3>
+      <ul>
+        <li><a href="mailto:delarosajosejohan@gmail.com">Correo electrónico</a></li>
+        <li><a href="https://www.tiktok.com/@johandlrz" target="_blank">TikTok</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100085673835356" target="_blank">Facebook</a></li>
+      </ul>
+      <button id="btn-sorpresa">Haz clic aquí 👆</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Johan De La Rosa – Con la ayuda de Dios en cada paso</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html><style>/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Encabezado */
+header {
   text-align: center;
+  background: #2c3e50;
+  color: white;
   padding: 2rem 1rem;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 header h2 {
-  margin: 0.5rem 0;
   font-weight: normal;
+  margin-top: 0.5rem;
 }
 
 .frase {
   font-style: italic;
   margin-top: 1rem;
+  color: #ecf0f1;
 }
 
+/* Secciones */
 main {
   max-width: 800px;
   margin: auto;
@@ -77,35 +143,114 @@ main {
 
 section {
   margin-bottom: 2rem;
+  opacity: 0; /* Para efecto fade-in */
+  transform: translateY(50px); /* Para efecto fade-in */
 }
 
 h3 {
-  border-bottom: 2px solid #2e7d32;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  color: #2c3e50;
 }
 
+/* Listas */
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: square;
+  margin: 0;
+  padding-left: 1.5rem;
 }
 
-ul li {
-  margin: 0.5rem 0;
-}
-
+/* Enlaces */
 a {
-  color: #2e7d32;
+  color: #3498db;
   text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+/* Botón sorpresa */
+#btn-sorpresa {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-sorpresa:hover {
+  background: #45a049;
+}
+
+/* Pie de página */
 footer {
   text-align: center;
+  background: #2c3e50;
+  color: white;
   padding: 1rem;
-  background-color: #eee;
-  font-size: 0.9rem;
-}</style>
+  margin-top: 2rem;
+}</style><script>// 1️⃣ Mensaje de bienvenida en consola
+console.log("Bienvenido al portafolio de Johan 🙌");
+
+// 2️⃣ Efecto de escritura automática para la frase bíblica
+const frase = document.querySelector(".frase");
+const texto = frase.textContent;
+frase.textContent = "";
+let indice = 0;
+
+function escribir() {
+  if (indice < texto.length) {
+    frase.textContent += texto.charAt(indice);
+    indice++;
+    setTimeout(escribir, 100); // velocidad de escritura
+  }
+}
+escribir();
+
+// 3️⃣ Fade-in al hacer scroll
+const secciones = document.querySelectorAll("section");
+
+function mostrarSeccion() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  secciones.forEach(seccion => {
+    const top = seccion.getBoundingClientRect().top;
+
+    if (top < triggerBottom) {
+      seccion.style.opacity = 1;
+      seccion.style.transform = "translateY(0)";
+      seccion.style.transition = "all 0.6s ease-out";
+    } else {
+      seccion.style.opacity = 0;
+      seccion.style.transform = "translateY(50px)";
+    }
+  });
+}
+
+window.addEventListener("scroll", mostrarSeccion);
+window.addEventListener("load", mostrarSeccion);
+
+// 4️⃣ Efecto hover dinámico en enlaces
+const enlaces = document.querySelectorAll("a");
+
+enlaces.forEach(enlace => {
+  enlace.addEventListener("mouseenter", () => {
+    enlace.style.color = "#e67e22"; // naranja brillante
+    enlace.style.transform = "scale(1.1)";
+  });
+  enlace.addEventListener("mouseleave", () => {
+    enlace.style.color = "#3498db"; // color original
+    enlace.style.transform = "scale(1)";
+  });
+});
+
+// 5️⃣ Botón sorpresa
+document.getElementById("btn-sorpresa").addEventListener("click", () => {
+  alert("Gracias por visitar mi portafolio 🙏🔥");
+});</script>
